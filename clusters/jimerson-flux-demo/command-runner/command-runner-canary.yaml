@@ -28,4 +28,5 @@ spec:
       - name: load-test
         url: http://flagger-loadtester.command-runner/
         metadata:
-          cmd: "hey -z 1m -q 10 -c 2 http://command-runner:8080/"
+          # cmd: "hey -z 1m -q 10 -c 2 http://command-runner:8080/"
+          cmd: "curl -I http://command-runner.command-runner:8080/actuator/health"
