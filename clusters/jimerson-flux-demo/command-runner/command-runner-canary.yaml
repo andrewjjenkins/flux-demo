@@ -11,7 +11,7 @@ spec:
   service:
     port: 8080
   analysis:
-    interval: 1m
+    interval: 30s
     threshold: 10
     maxWeight: 50
     stepWeight: 5
@@ -19,14 +19,13 @@ spec:
       - name: request-success-rate
         thresholdRange:
           min: 99
-        interval: 1m
+        interval: 30s
       - name: request-duration
         thresholdRange:
           max: 500
-        interval: 1m
+        interval: 30s
     webhooks:
       - name: load-test
         url: http://flagger-loadtester.command-runner/
         metadata:
-          # cmd: "hey -z 1m -q 10 -c 2 http://command-runner:8080/"
-          cmd: "curl -I http://command-runner.command-runner:8080/actuator/health"
+          cmd: "hey -z 1m -q 10 -c 2 http://command-runner:8080/"
