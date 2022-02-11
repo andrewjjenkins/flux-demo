@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/brianjimerson/flux-demo
+  url: ssh://git@github.com/andrewjjenkins/flux-demo
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/jimerson-flux-demo
+  path: ./clusters/andrew-flux-demo
   prune: true
   sourceRef:
     kind: GitRepository
