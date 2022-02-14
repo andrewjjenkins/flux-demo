@@ -12,4 +12,7 @@ spec:
   path: ./
   prune: true
   targetNamespace: command-runner
+  dependsOn:
+    namespace: flagger
+    name: flagger
 
