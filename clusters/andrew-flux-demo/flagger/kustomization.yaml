@@ -1,17 +1,6 @@
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
-metadata:
-  name: flagger
-  namespace: flagger
-spec:
-  interval: 1m0s
-  path: ./flagger
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  targetNamespace: flagger
-  resources:
-  - ns.yaml
-  - flagger.yaml
+resources:
+- ns.yaml
+- flagger.yaml
