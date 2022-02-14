@@ -12,3 +12,6 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: flagger
+  resources:
+  - ns.yaml
+  - flagger.yaml
