@@ -6,10 +6,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: ./deploy
-  prune: true
   sourceRef:
     kind: GitRepository
     name: command-runner
+  path: ./
+  prune: true
   targetNamespace: command-runner
 
